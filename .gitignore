@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Entorno
+.env
+!.env.example
+
+# Tests
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Docs (compilación LaTeX)
+docs/*.aux
+docs/*.log
+docs/*.out
+docs/*.toc
+docs/*.fls
+docs/*.fdb_latexmk
+docs/*.synctex.gz
+
+# Base de datos local de desarrollo
+*.sql.bak
+pgdata/
+
+# Datos de terreno descargados localmente
+*.tif
+*.hgt
+data/
+
+# Docker
+.docker/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Claude Code
+.claude/

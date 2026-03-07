@@ -1,0 +1,6 @@
+falcon[asgi]==4.0.2
+uvicorn[standard]==0.30.6
+pydantic==2.7.4
+sqlalchemy[asyncio]==2.0.30
+asyncpg==0.29.0
+alembic==1.13.1
