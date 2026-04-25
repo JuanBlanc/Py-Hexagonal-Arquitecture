@@ -1,0 +1,34 @@
+meta {
+  name: Register player
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/players
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "username": "{{rndUser}}",
+    "display_name": "Neo",
+    "region": "eu"
+  }
+}
+
+script:pre-request {
+  // Username único para poder reejecutar sin chocar con DuplicateEntity.
+  bru.setVar("rndUser", "player_" + Date.now());
+}
+
+script:post-response {
+  if (res.status === 201) {
+    bru.setVar("playerId", res.body.player_id);
+  }
+}

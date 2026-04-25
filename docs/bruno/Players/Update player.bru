@@ -1,0 +1,23 @@
+meta {
+  name: Update player
+  type: http
+  seq: 4
+}
+
+patch {
+  url: {{baseUrl}}/players/{{playerId}}
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "display_name": "Mr. Anderson",
+    "region": "na",
+    "level": 7
+  }
+}

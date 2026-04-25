@@ -1,0 +1,20 @@
+meta {
+  name: Leaderboard stream (WebSocket)
+  type: ws
+  seq: 1
+}
+
+ws {
+  url: {{wsUrl}}/games/{{gameId}}/leaderboard/stream
+}
+
+docs {
+  El servidor solo EMITE: por cada puntuación nueva del juego envía un mensaje JSON
+  (ScoreResponse). El cliente no necesita enviar nada; basta con conectar.
+
+  Requiere una versión de Bruno con soporte WebSocket. Si tu Bruno no lo trae,
+  usa el fallback por terminal documentado en docs/bruno/README.md (websocat / wscat).
+
+  Para verlo en vivo: abre esta conexión y, en paralelo, lanza "Submit score"
+  varias veces; cada envío debería aparecer aquí como un mensaje.
+}

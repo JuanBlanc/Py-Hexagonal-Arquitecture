@@ -1,0 +1,15 @@
+meta {
+  name: Suggest opponents
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/players/{{playerId}}/opponents?count=5
+  body: none
+  auth: none
+}
+
+params:query {
+  count: 5
+}

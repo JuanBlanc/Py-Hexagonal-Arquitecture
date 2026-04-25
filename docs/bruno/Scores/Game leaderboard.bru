@@ -1,0 +1,15 @@
+meta {
+  name: Game leaderboard
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/games/{{gameId}}/leaderboard?limit=10
+  body: none
+  auth: none
+}
+
+params:query {
+  limit: 10
+}
